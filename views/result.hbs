@@ -1,0 +1,237 @@
+ <html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Leaf Diseases Detection </title>
+  <link rel="stylesheet" href="css/result.css">
+</head>
+
+
+<body>
+ 
+ 
+ <!--1st page-->
+  <section id="main">
+    <nav>
+
+      <a href="#" class="logo"> </a>
+      <ul class="menu">
+        <li><a href="/" class="home"> Home </a></li>
+        <li><a href="#image"> Image section </a></li>
+        <li><a href="#about"> About </a></li>
+       
+      </ul>
+    </nav>
+  </section>
+
+
+
+  <section id="mid">
+  
+
+    <div class="upload-main">
+        <input type="file" name="img_upload" id="filetag" >
+         <img src="" id="preview">
+         <a href="#" class="search-btn" id="button">
+            <h4>Check Now  </h4>
+          </a>
+  </div>
+
+
+			<div class="result">
+					<h2>Result</h2>
+					<img src="images/IMG_20201217_124617.jpg" id="preview1">
+				    <a href="#graph" class="grph-btn" id="btn">
+                        <h4>View Graph </h4>
+                      </a>
+			</div>
+					
+           
+
+
+
+       
+
+          <!---
+				<img src="images/r.gif" class="imag">
+
+				<a href="#graph" class="graph-btn" id="button">
+
+            <h4>View Graph </h4>
+                    </a>
+                -->
+      
+      </section>
+
+
+
+     
+     
+      <section id="graph">
+
+
+
+            <div id="one">
+                    <html>
+                    <head>
+                        <title>Google Charts Tutorial</title>
+                        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                        <script type="text/javascript">
+                            google.charts.load('current', {
+                                packages: ['corechart']
+                            });
+                        </script>
+                    </head>
+                    <body>
+                        <div id="container" style="width: 600px; height: 500px; margin: 0 auto"></div>
+                        <script language="JavaScript">
+                            function Cht() {
+                                var data = google.visualization.arrayToDataTable([
+                                    ['No. of spot', '%'],
+                                    ['Spot 1', 90],
+                                    ['Spot 2', 61.2],
+                                    ['Spot 3', 19],
+                                    ['Spot 4', 49],
+                                
+                                ]);
+                                var options = {
+                                title: 'Sport Disease',
+                                    isStacked: true
+                                };
+                                var chart = new google.visualization.ColumnChart(document.getElementById('container'));
+                                chart.draw(data, options);
+                            }
+                            google.charts.setOnLoadCallback(Cht);
+                        </script>
+                    </body>
+                    </html>
+              </div>
+
+
+
+
+
+  <div >
+    <div id="chartContainer" style="height: 360px; width: 100%;"></div>
+
+   
+
+
+    
+  </div>
+
+
+
+  <div>3</div>  
+  <div>4</div>
+
+
+    </section>
+
+
+
+
+
+
+	<section id="footer1">
+                <img src ="images/group_66.jpg" class="footer-img">
+              <div class="last">
+                  <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
+                  <a href="#">SCS 10sem student</a>.
+                  </p>
+          </div>
+      </section>
+
+
+
+
+
+      <script>
+          
+          
+        document.getElementById("filetag").addEventListener("click",function()
+          {
+          
+            document.querySelector("#preview").style.display="flex";
+            
+          })
+        
+        var fileTag = document.getElementById("filetag"),
+            preview = document.getElementById("preview");
+            
+        fileTag.addEventListener("change", function() {
+          changeImage(this);
+        });
+        
+        function changeImage(input) {
+          var reader;
+        
+          if (input.files && input.files[0]) {
+            reader = new FileReader();
+        
+            reader.onload = function(e) {
+              preview.setAttribute('src', e.target.result);
+            }
+        
+            reader.readAsDataURL(input.files[0]);
+          }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    var chart = new CanvasJS.Chart("chartContainer", {
+        title: {
+            text: "Temperature of Each Boiler"
+        },
+        axisY: {
+            title: "Temperature (°C)",
+            suffix: " °C"
+        },
+        data: [{
+            type: "pie",	
+        showInLegend: true,
+            yValueFormatString: "#,### °C",
+            indexLabel: "{y}",
+        legendText: "{y}",
+            dataPoints: [
+                { y: 100 },
+                { y: 163 },
+                { y: 154 },
+                { y: 176 },
+                { y: 184 },
+                { y: 122 }
+            ]
+        }]
+    });
+    
+    function updateChart() {
+        var boilerColor, deltaY, yVal;
+        var dps = chart.options.data[0].dataPoints;
+        for (var i = 0; i < dps.length; i++) {
+            deltaY = Math.round(2 + Math.random() *(-2-2));
+            yVal = deltaY + dps[i].y > 0 ? dps[i].y + deltaY : 0;		
+            dps[i] = {y: yVal};
+        }
+        chart.options.data[0].dataPoints = dps; 
+        chart.render();
+    }
+    updateChart();
+    
+    setInterval(function() {updateChart()}, 500);
+        </script>
+
+  </body>
+
+</html>

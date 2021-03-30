@@ -1,0 +1,202 @@
+
+body{
+    margin:0px;
+    padding:0px;
+    opacity: 1;
+   }
+   
+
+
+   ul{
+       list-style:none;
+     }
+   
+     a{
+         text-decoration:none;
+      }
+      
+      #main{
+          width:100%;
+          height:100vh;
+          box-sizing: border-box;
+          background-color:#FFFFFF;
+          position:relative;
+          background-image:url('images/group_19.jpg');
+          background-repeat:no-repeat;
+          background-size: 750px;
+          background-position: right bottom;
+          opacity:1;
+      }
+      
+      nav{
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+          text-transform: uppercase;
+          font-weight:600;
+          letter-spacing: 2px;
+          font-family:calibri ;
+          position: fixed;
+          top:0;
+          left:20px;
+          width:100%;
+          box-sizing: border-box;
+          padding:30px 50px;
+          background-color:#FFFFFF;
+          box-shadow: 2px 2px 12px rgba(0,0,0,0.05);
+          z-index:1;
+          background-image: url('images/undraw_cabin_hkfr.svg');
+          background-repeat:no-repeat;
+          background-size: 90px;
+      
+   
+      }
+      
+      .menu 
+      {
+           display: flex;
+         
+      }
+      
+      .menu li a{
+          padding: 10px 15px;
+          color:#6c707c;
+          font-size:16px;
+      }
+      .logo{
+         
+          background-repeat:no-repeat;
+          background-size: 1px;
+      }
+      
+      .menu li a:hover{
+          background-color:#292929;
+      color:#FFFFFF;}
+   
+   
+   .font{
+       font-family:calibri;
+       width:500px;
+       position: absolute;
+       left:20%;
+       top:20%;}
+           
+   .font .wel{
+   color: #6c707c;
+   font-size:20px;
+   text-align:center;
+   
+   }
+   
+   .font h1{
+       font-family:Poppins;
+       font-size:40px;
+       margin:0px;
+       letter-spacing:3px;
+       background: -webkit-linear-gradient(120deg, #B5D653 ,#31A95D);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+
+   }
+          
+   .font .iamge-btn{
+       width:170px;
+       height:45px;
+       border-radius: 20px;
+       
+       display: flex;
+       justify-content:center;
+       align-items:center;
+       background: linear-gradient(to left,#31A95D ,#B5D653);
+       color:#FAFAFA;
+      
+   }
+   
+      
+   .iamge-btn:hover{
+   background : #f1f1f1;
+   color:#000000;
+   border: 2px solid #31A95D;
+   
+  }
+   
+   
+   
+   #about{
+       width: 100%;
+       height: 105vh;
+       box-sizing: border-box;
+       position: relative;
+       background-image:url('images/group_146.jpg');
+       background-repeat:no-repeat;
+       background-size: 700px;
+       background-position:left bottom;
+       opacity:1;
+       display: flex;
+   }
+   
+   
+   
+   .about-txt{
+       font-family:calibri;
+       width:600px;
+       position: absolute;
+       top:30%;
+       right:10%;
+   }
+   
+   
+   .about-txt h2{
+       margin:0px;
+       letter-spacing:3px;
+       font-size: 2rem;
+       background: -webkit-linear-gradient(95deg, #B5D653 ,#31A95D);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+   }
+   
+   .about-txt p{
+       font-size: 1rem;
+   }
+   
+   
+   
+  
+      
+    .close{
+       position: absolute;
+       top:15px;
+       right: 28px;
+       background: #17d1ac;
+       height: 20px;
+       width: 20px;
+       border-radius: 50%;
+       cursor:pointer;
+   }
+  
+   
+   
+  
+/*footer*/
+       #footer{
+           width:100%;
+           height: 9vh;
+       box-sizing: border-box;
+       position: absolute;
+       
+       }
+   
+       .footer-img
+       {
+           width:100%;
+           height: 1.9%;	
+       }
+      
+       #footer .last{
+           text-align: center;
+       }
+   
+   
+  
+
+        
